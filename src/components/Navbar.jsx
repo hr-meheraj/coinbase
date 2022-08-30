@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
     return (
@@ -17,9 +18,11 @@ function Navbar() {
                         <li><a>Company </a></li>
                     </ul>
                 </div>
-                <a className="cursor-pointer normal-case text-xl">
+               <Link to='/'>
+               <a className="cursor-pointer normal-case text-xl">
                     <img src='https://images.ctfassets.net/q5ulk4bp65r7/3TBS4oVkD1ghowTqVQJlqj/2dfd4ea3b623a7c0d8deb2ff445dee9e/Consumer_Wordmark.svg' className='w-[112px]' />
                 </a>
+               </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
@@ -33,8 +36,10 @@ function Navbar() {
                 </ul>
             </div>
             <div className="navbar-end gap-4">
-                <a className="">Sign In</a>
-                <a className="py-2 px-4 text-white rounded-md outline-none font-semibold bg-[#0a46e4]">Get started</a>
+                <Link to='/sign-in'>Sign In</Link> 
+               <Link to='/sign-in'>
+               <a className="py-2 px-4 text-white rounded-md outline-none font-semibold bg-[#0a46e4]">Get started</a>
+               </Link>
             </div>
         </div>
     )
